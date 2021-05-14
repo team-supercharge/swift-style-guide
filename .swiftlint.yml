@@ -3,43 +3,87 @@ disabled_rules:
   - private_unit_test
   - type_body_length
   - valid_ibinspectable
+  - strict_fileprivate
+  - function_default_parameter_at_end
+  - multiline_function_chains
+  - force_unwrapping
+  - type_name
 
 opt_in_rules:
-  - empty_count
   - closure_spacing
-  - contains_over_first_not_nil
   - convenience_type
   - discouraged_object_literal
   - empty_string
   - fallthrough
   - fatal_error_message
   - first_where
-  - joined_default_parameter
   - multiline_arguments
-  - multiline_function_chains
   - multiline_parameters
-  - operator_usage_whitespace
   - overridden_super_call
   - override_in_extension
-  - private_action
-  - private_outlet
   - required_enum_case
-  - sorted_first_last
   - vertical_parameter_alignment_on_call
   - yoda_condition
   - array_init
   - explicit_init
   - function_default_parameter_at_end
-  - prohibited_super_call
   - redundant_nil_coalescing
-  - strict_fileprivate
+  - closure_body_length
+  - collection_alignment
+  - conditional_returns_on_newline -
+  - contains_over_filter_count
+  - contains_over_filter_is_empty
+  - contains_over_first_not_nil
+  - contains_over_range_nil_comparison
+  - discouraged_optional_boolean
+  - empty_collection_literal
+  - empty_count
+  - enum_case_associated_values_count (3e)
+  - file_name_no_space
+  - flatmap_over_map_reduce
+  - identical_operands
+  - joined_default_parameter
+  - last_where
+  - literal_expression_end_indentation
+  - no_extension_access_modifier
+  - nslocalizedstring_key
+  - operator_usage_whitespace
+  - pattern_matching_keywords
+  - private_action
+  - private_outlet
+  - prohibited_super_call
+  - reduce_into
+  - redundant_type_annotation
+  - sorted_first_last
+  - static_operator
+  - toggle_bool
+  - unavailable_function
+  - unneeded_parentheses_in_closure_argument
+  - unused_declaration
+  - unused_import
+  - vertical_whitespace_closing_braces
 
 excluded:
   - Pods
+  - ios-dependencies
+  - UI/UITests
+  - App/AppTests
+  - UIComponentKit/UIComponentKitTests
+  - Common/CommonTests
+  - Domain/DomainTests
+  - Data/DataTests
+  - UI/Resources
+  - Frameworks
+  - Carthage
+  - Scripts
+  - node_modules
 attributes:
   severity: error
 closing_brace:
   severity: error
+closure_body_length:
+  - 30 #warning
+  - 40 #error
 closure_end_indentation:
   severity: error
 colon:
@@ -92,8 +136,9 @@ legacy_constructor:
 legacy_nsgeometry_functions:
   severity: error
 line_length:
-  - 120 #warning
-  - 120 #error
+  ignores_comments: true
+  warning: 120
+  error: 120
 mark:
   severity: error
 nesting:
@@ -123,7 +168,7 @@ switch_case_on_newline:
 syntactic_sugar:
   severity: error
 todo:
-  severity: error
+  severity: warning
 trailing_comma:
   severity: error
 trailing_newline:
@@ -168,7 +213,7 @@ unused_enumerated:
 vertical_parameter_alignment_on_call:
   severity: error
 strict_fileprivate:
-  severity: error
+  severity: warning
 empty_string:
   severity: error
 empty_count:
